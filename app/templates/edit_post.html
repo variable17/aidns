@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}AIDNS - Edit Notice{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+<div class="container">
+  <div class="container-fluid">
+    <div class="panel panel-default panel-info">
+      <div class="panel-heading text-center"><h1>Edit Notice</h1></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {{ wtf.quick_form(form) }}
+
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

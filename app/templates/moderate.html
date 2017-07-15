@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}AIDNS - Comment Moderation{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+<div class="container">
+  <div class="container-fluid">
+    <div class="panel panel-default panel-info">
+      <div class="panel-heading text-center"><h1>Edit Notice</h1></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+{% set moderate = True %}
+
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {% include '_comments.html' %}
+
+      </div>
+  </div>
+</div>
+
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.moderate') }}
+</div>
+{% endif %}
+{% endblock %}

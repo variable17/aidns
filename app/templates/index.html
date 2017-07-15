@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block title %}AIDNS{% endblock %}
+
+{% block page_content %}
+
+<div class="container-fluid">
+  <div class="panel panel-default panel-info">
+    <div class="panel-heading text-center"><h2>Accurate Institute Database & Notification System</h2></div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {% if current_user.can(Permission.WRITE_ARTICLES) %}
+        {{ wtf.quick_form(form) }}
+        {% endif %}
+
+      </div>
+  </div>
+</div>
+<br>
+<br>
+
+
+
+<ul class="nav nav-tabs">
+      <li><a href="{{ url_for('main.post_cse') }}">CSE</a></li>
+      <li><a href="{{ url_for('main.post_it') }}">IT</a></li>
+      <li><a href="{{ url_for('main.post_ce') }}">CE</a></li>
+      <li><a href="{{ url_for('main.post_me') }}">ME</a></li>
+      <li><a href="{{ url_for('main.post_ee') }}">EE</a></li>
+</ul>
+
+<br>
+<br>
+
+
+
+<div class="container-fluid">
+  <div class="panel panel-default panel-info">
+    <div class="panel-heading text-center">ALL NOTICES</div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {% include '_posts.html' %}
+
+      </div>
+  </div>
+</div>
+
+
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+{% endif %}
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block title %}AIDNS - Notice{% endblock %}
+
+{% block page_content %}
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {% include '_posts.html' %}
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+<button class="btn btn-primary"><h4 id="comments" class="text-center">Comments</h4></button>
+
+
+
+
+{% if current_user.can(Permission.COMMENT) %}
+
+
+
+       <div class="comment-form">
+        {{ wtf.quick_form(form) }}
+        </div>
+
+
+
+    
+{% endif %}
+
+<div class="container-fluid">
+  <div class="panel panel-default">
+      <div class="panel-body">
+        {% include '_comments.html' %}
+
+      </div>
+  </div>
+</div>
+
+
+
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.post', fragment='#comments', id=posts[0].id) }}
+</div>
+{% endif %}
+{% endblock %}

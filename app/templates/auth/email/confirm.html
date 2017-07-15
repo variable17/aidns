@@ -1,0 +1,13 @@
+Dear <b>{{ user.username }}</b>,
+
+Welcome to AIDNS!
+<p>
+To confirm your account please click on the following link:
+
+{{ url_for('auth.confirm', token = token, _external=True) }}
+
+Sincerely, The AIDNS Team
+</p>
+<b>
+Note: replies to this mail are not monitered.
+</b>

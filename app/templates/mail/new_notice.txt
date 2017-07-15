@@ -1,0 +1,5 @@
+A new notice has been posted - 
+
+Posted by - {{ author }}
+Notice Title - {{ head }}
+Notice details - {{ body }}
