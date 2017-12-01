@@ -6,52 +6,50 @@
 
 {% block page_content %}
 <div class="container">
-  <div class="container-fluid">
-    <div class="panel panel-default panel-info">
-      <div class="panel-heading text-center"><h1>Details of students</h1></div>
+    <div class="container-fluid">
+        <div class="panel panel-default panel-info">
+            <div class="panel-heading text-center"><h1>Details of students</h1></div>
+        </div>
     </div>
-  </div>
 
 </div>
 
 
-
-
 <div class="container-fluid">
-  <div class="panel panel-default">
-      <div class="panel-body">
-        
-        {{ wtf.quick_form(form) }}
+    <div class="panel panel-default">
+        <div class="panel-body">
 
-      </div>
-  </div>
+            {{ wtf.quick_form(form) }}
+
+        </div>
+    </div>
 </div>
 
-  
+
 <br>
 <br>
 
 <div class="container-fluid">
-  <div class="panel panel-default">
-      <div class="panel-body" style="font-size: 20px">
-        
-        <table style="width:100%", class="table-striped">
-        <tr>
-          <th>Roll No</th>
-          <th>Name</th> 
-          <th>Email</th>
-        </tr>
-      {% for user in users %}
-        <tr>
-          <td>{{ user.roll }}</td>
-          <td><a href="{{ url_for('main.user', username=user.username) }}">{{ user.username }}</a></td> 
-          <td>{{ user.email }}</td>
-        </tr>
-      {% endfor %}
-        </table>
+    <div class="panel panel-default">
+        <div class="panel-body" style="font-size: 20px">
 
+            <table style="width:100%" , class="table-striped">
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.roll }}</td>
+                    <td><a href="{{ url_for('main.user', username=user.username) }}">{{ user.username }}</a></td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
     </div>
-  </div>
 </div>
 
 

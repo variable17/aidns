@@ -7,28 +7,26 @@
 
 {% block page_content %}
 <div class="page-header">
-<div class="container">
-  <div class="container-fluid">
-    <div class="panel panel-default panel-info">
-      <div class="panel-heading text-center"><h1>Edit Profile</h1></div>
-    </div>
-  </div>
+    <div class="container">
+        <div class="container-fluid">
+            <div class="panel panel-default panel-info">
+                <div class="panel-heading text-center"><h1>Edit Profile</h1></div>
+            </div>
+        </div>
 
-</div>
+    </div>
 </div>
 
 
 <div class="container-fluid">
-  <div class="panel panel-default">
-      <div class="panel-body">
-      	<div class="col-md-4">
-        	{{ wtf.quick_form(form) }}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-4">
+                {{ wtf.quick_form(form) }}
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
 </div>
-
-
 
 
 {% endblock %}
