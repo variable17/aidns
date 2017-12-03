@@ -28,7 +28,7 @@ install all of them at once using the `pip install -r requirements.txt`
 ## LICENCE
 MIT License
 
-Copyright (c) 2017 Alex Lockwood
+Copyright (c) 2017 Vishal Kumar Gupta and Utkarsh Bhatt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
