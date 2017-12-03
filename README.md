@@ -3,6 +3,8 @@
 This is a centralized
 notification web app developed using Flask, bootstrap and python 3.
 
+See  the live version on [https://aidns.herokuapp.com/](https://aidns.herokuapp.com/).
+
 ## Features
 
 * User account management
