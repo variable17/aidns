@@ -21,7 +21,7 @@ install all of them at once using the `pip install -r requirements.txt`
 * Used [pep8 coding guidelines](https://www.python.org/dev/peps/pep-0008/)
 * Used sublime text editor.
 * Hosted on Heroku.
-* Developed using Python, Bootstrap and 💗.
+* Developed using Python, Bootstrap and Flask.
 
 ## Contributors       
 * [Vishal Kumar Gupta](https://github.com/variable17)
