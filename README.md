@@ -30,7 +30,7 @@ by using `python manage.py runserver`. But if you run after following steps, you
 Open a new terminal and go through the following steps.
 
 * `python3`
-* 'from app import create_app'
+* `from app import create_app`
 * `from app.models import * #  imports all the tables`
 * `app = create_app('default')`
 * `app.app_context().push()  # creates a new context for running the app in terminal`
