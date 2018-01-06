@@ -13,21 +13,28 @@ See  the live version on [https://aidns.herokuapp.com/](https://aidns.herokuapp.
 
 ## Running the project
 * Create virtualenv.
+
     `virtualenv -p python3 venv`
+
 * Navigate to the app directory
+
     `cd aidns`
+
 * Activate virtualenv
+
     `source venv/bin/activate`
+
 * Install the dependencies
+
     `pip install requirements.txt`
 
-Now, ideally, this application should run fine by starting the server
-by using `python manage.py runserver`. But if you run after following steps, you'll get a database error from SQLAlchemy.
-`sqlalchemy.exc.OperationalError`
+Now, ideally, the application should run fine by using `python manage.py runserver` command. But if you run after following the steps above, you'll get a database error from SQLAlchemy.
 
-* The database is not actually in working condition, so for that to work, you'll need to create a new context for the app to run in.
+    `sqlalchemy.exc.OperationalError`
 
-Open a new terminal and go through the following steps.
+This is because the database is not actually in working condition, so for that to work, you'll need to create a new context for the app to run in.
+
+Open a *new* terminal and go through the following steps.
 
 * `python3`
 * `from app import create_app`
